@@ -1,0 +1,228 @@
+L This is the code for the portfolio website that i have designed.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+<style>
+/* Reset default margin and padding for all elements */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;. color: white;
+}
+
+/* Set a background color and font styles for the whole page */ body {
+background-color: rgb(15, 15, 15); font-family: Arial, sans-serif;
+}
+
+/* Style the header and navigation menu */ header {
+background-color: #050505; color: #fff;
+padding: 10px 0;
+}
+
+nav {
+text-align: center;
+}
+
+nav a {
+color: #fff;
+text-decoration: none; margin: 0 20px;
+font-size: 18px;
+}
+
+#menubar {
+list-style-type: none; background-color: #00ff00; position: absolute;
+width: 100%;
+padding: 0%;
+}
+#menubar li {
+
+display: flex;
+flex-direction: column; float: right;
+}
+
+/* Style the hero section */ #hero {
+text-align: center; padding: 80px 0;
+}
+
+#hero h1 {
+font-size: 36px; color: white;
+}
+
+#hero p {
+font-size: 18px; color: #777;
+}
+
+/* Style the portfolio section */ #portfolio {
+background-color:#cccccc; padding: 40px 0;
+}
+
+.project {
+text-align: center; margin: 20px; padding: 20px;
+border: 1px solid #ddd; background-color: #f9f9f9;
+}
+
+.project img {
+align-self: center; max-width: 25%; height: auto;
+margin-bottom: 10px;
+}
+
+.project h3 {
+font-size: 24px; color: #333;
+}
+
+.project p {
+
+font-size: 16px; color: #777;
+}
+
+/* Style the about section */ #about {
+text-align: center; padding: 40px 0; color: white;
+}
+
+#about img {
+max-width: 20%;
+height: 10%;
+border-radius: 10%;
+}
+
+/* Style the contact section */ #contact {
+background-color: #f4f4f4; padding: 40px 0;
+text-align: center;
+}
+
+#contact form {
+max-width: 500px; margin: 0 auto;
+}
+
+#contact label { display: block; font-size: 18px;
+margin-bottom: 10px;
+}
+
+#contact input[type="text"], #contact input[type="email"], #contact textarea {
+width: 100%; padding: 10px; margin-bottom: 20px;
+border: 1px solid #ddd;
+}
+
+#contact button { background-color: #333; color: #fff;
+padding: 10px 20px;
+
+font-size: 18px; border: none; cursor: pointer;
+}
+
+#contact button:hover { background-color: #555;
+}
+
+/* Style the footer */ footer {
+background-color: #333; color: #fff;
+text-align: center; padding: 10px 0;
+}
+
+/* Add media queries for responsiveness if needed */
+
+</style>
+</head>
+
+<body>
+<!-- Header Section -->
+<header>
+<nav>
+<!-- Add your navigation menu here (e.g., Home, Portfolio, About, Contact) -->
+<ul id="menubar">
+<li><a href="CONTACT.html">CONTACT</a></li>
+<li><a href="ABOUT.html">ABOUT</a></li>
+<li><a href="PORTFOLIO.html">PORTFOLIO</a></li>
+<li><a href="INDEX.HTML" id="active">HOME</a></li>
+
+</ul>
+</nav>
+</header>
+
+<!-- Hero Section -->
+<section id="hero">
+<h1>MOHAMMED ISMAIL BASHA</h1>
+<p>Web Developer </p>
+<!-- Add a call-to-action button or text here -->
+</section>
+
+<!-- Portfolio Section -->
+<section id="portfolio">
+<h2>Project</h2>
+<div class="project">
+
+<img
+src="https://img.freepik.com/premium-vector/find-music-logo-design-template_733947-1931.j pg?w=2000"alt="Project 1">
+<h3> Discover🔍 Music🎵 </h3>
+<p>"Music Hub" is a music-oriented website featuring a sleek design with a black header and a logo section displaying an animated GIF logo, accompanied by vibrant green and gray text. The header contains links to "Privacy Policy," "Terms and Conditions," and a "Login/Sign Up" button, while the menu bar below offers navigation options for categories like "HOME," "NEW HITS," "NEWLY ADDED," "FAVOURITIES," "PLAY LIST," and "ABOUT,"
+with the active page highlighted in green. A search bar is conveniently positioned for user queries. The project currently includes placeholders for page content and a footer, suggesting its potential for music discovery and exploration, though further development is needed for full functionality..</p>
+</div>
+<!-- Add more project entries as needed -->
+</section>
+
+<!-- About Section -->
+<section id="about">
+<h2>About Me</h2>
+<img src="https://wallpapers.com/images/featured/anonymous-cw35qqcs9qzmva9i.jpg" alt="Your Photo">
+<p>"Hello! I'm MD.ISMAIL BASHA, and I'm passionate about designing of websites. I have a strong background in HTML & CSS, which has fueled my curiosity for webdevelopment. When I'm not [what you like to do], you can often find me reading books. I believe in my core beliefs and values, and I'm always eager to learn and explore new things. This website is my platform to share my thoughts, experiences, and insights with you. Join me on this journey, and let's explore together!".</p>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+<h2>Contact Me</h2>
+<p>Feel free to reach out to me via email or through the contact form below.</p>
+<form action="process_contact.php" method="post">
+<label for="name">Name:</label>
+<input type="text" id="name" name="name" required>
+
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" required>
+
+<label for="message">Message:</label>
+<textarea id="message" name="message" rows="4" required></textarea>
+
+<button type="submit">Submit</button>
+</form>
+</section>
+
+<!-- Footer Section -->
+<footer>
+<p>&copy; MOHAMMED ISMAIL BASHA. All rights reserved.</p>
+</footer>
+
+<!-- Adding JavaScript script here... -->
+<script>
+// Function to validate the contact form function validateForm() {
+const name = document.getElementById('name').value; const email = document.getElementById('email').value;
+const message = document.getElementById('message').value;
+
+if (name === '' || email === '' || message === '') { alert('Please fill in all fields');
+return false;
+}
+
+// Add more advanced form validation here if needed
+
+return true;
+}
+
+// Smooth scrolling for navigation links document.querySelectorAll('nav a').forEach(anchor => {
+anchor.addEventListener('click', function(e) { e.preventDefault();
+
+const targetId = this.getAttribute('href').substring(1);
+const targetElement = document.getElementById(targetId);
+
+window.scrollTo({
+top: targetElement.offsetTop - 50, // Adjust the offset as needed behavior: 'smooth'
+
+
+
+});
+});
+});
+
+</script>
+
+</body>
+
+</html>
